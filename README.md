@@ -95,3 +95,116 @@ The application exposes the RAG pipeline through a **FastAPI backend** and provi
                   │ + Sources   │
                   │ + Score     │
                   └──────────────┘
+# 💬 Sample Questions & Answers
+
+The following examples demonstrate the chatbot's ability to retrieve
+relevant information from the Agentic AI ebook and generate
+document-grounded answers.
+
+---
+
+## 1. What is Agentic AI?
+
+### Question
+
+> What is Agentic AI?
+
+### Answer
+
+> Agentic AI refers to systems capable of autonomous decision-making and
+> action in pursuit of specific objectives. These systems can perceive,
+> decide, and act independently, transitioning from standalone tools to
+> interconnected systems.
+
+**Retrieval Score:** `0.8561`
+
+---
+
+## 2. What are multi-agent systems?
+
+### Question
+
+> What are multi-agent systems?
+
+### Answer
+
+> Multi-agent systems (MAS) are a category of agentic systems that excel
+> in tasks requiring diverse feedback and parallel task execution. The key
+> idea behind MAS is to orchestrate multiple autonomous atomic agents to
+> accomplish tasks. These systems are increasingly utilized for their
+> ability to collaborate and adapt in real-time, making them suitable for
+> complex, dynamic tasks.
+>
+> A system qualifies as a multi-agent AI system when it contains
+> foundational agents, one or more worker and utility agents, clear goals,
+> and a communication mechanism for agents to interact. MAS allow
+> independent agent operation, facilitating dynamic task allocation and
+> parallel processing across multiple sub-goals derived from an overall
+> goal. They can leverage feedback from other agents to verify their work
+> and improve task outcomes.
+
+**Retrieval Score:** `0.8498`
+
+---
+
+## 3. Describe AI agents and its applications
+
+### Question
+
+> Describe AI agents and its applications
+
+### Answer
+
+> Agentic AI refers to systems capable of autonomous decision-making and
+> action in pursuit of specific objectives. These systems can perceive,
+> decide, and act independently, transitioning from standalone tools to
+> interconnected systems.
+>
+> Applications of AI agents include:
+>
+> - **Early Software Agents:** Advanced tactical decision-making,
+>   focusing on isolated tasks within workflows. They revolutionized
+>   distributed computing with object-oriented paradigms and laid the
+>   foundation for modern microservices.
+>
+> - **Intelligent Agents:** Enhanced workflow automation and introduced
+>   rule-based decision systems in enterprise environments.
+>
+> - **Autonomous Agents (Modern Agents):** Sense and act on their
+>   environment to pursue long-term goals, influencing future states for
+>   continuous progress. They enable self-driving systems, smart
+>   assistants, and adaptive industrial automation with continuous
+>   learning.
+
+**Retrieval Score:** `0.8325`
+
+---
+
+## 4. Out-of-Context Question
+
+### Question
+
+> What is the population of India?
+
+### Answer
+
+> I couldn't find this information in the provided ebook.
+
+This demonstrates the grounding behavior of the RAG pipeline. The
+chatbot is designed to answer questions using the provided Agentic AI
+ebook rather than relying on external knowledge.
+
+---
+
+## 🔎 What These Examples Demonstrate
+
+| Test | Demonstrates |
+|---|---|
+| What is Agentic AI? | Basic semantic retrieval |
+| What are multi-agent systems? | Retrieval of detailed conceptual information |
+| Describe AI agents and its applications | Retrieval of multiple related concepts |
+| Population of India | Out-of-context / grounding behavior |
+
+The chatbot returns the generated answer along with the retrieval score
+and retrieved document context, making the RAG pipeline inspectable
+during development.
